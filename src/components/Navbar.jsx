@@ -53,7 +53,7 @@ const Navbar = () => {
       <div className="hidden lg:block">
         <img
           className="absolute h-[120px] bottom-8 -right-16 mx-auto transition-transform duration-300 transform hover:rotate-12 hover:translate-x-4 hover:translate-y-[-10px] pointer-events-auto"
-          src={hat} // Ensure this is the correct source for your hat image
+          src={hat}
           alt="/"
         />
       </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
           <img className="h-full" src={cam} alt="/" />
         </div>
         <img
-          className="absolute h-[35px] top-24 -left-3 transition-transform duration-300 transform -translate-y-full group-hover:translate-y-0 group-hover:opacity-100"
+          className="absolute h-[35px] top-24 -left-3 transition-transform duration-300 transform -translate-y-full group-hover:translate-y-0 group-hover:opacity-100 pointer-events-auto"
           src={pic}
           alt="/"
         />

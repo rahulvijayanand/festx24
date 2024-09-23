@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../assets/festxlogo.png";
 import SSEC from "../assets/ssec.png";
 import CSBS from "../assets/csbslogo.png";
@@ -6,10 +6,38 @@ import ButtonImage from "../assets/button.png";
 import Arrow from "../assets/arrow.png";
 
 const Home = () => {
+  const calculateTimeLeft = () => {
+    const targetDate = new Date("October 17, 2024 09:00:00").getTime();
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-cover bg-center bg-no-repeat items-center justify-center">
       <div className="body2">
-        <div className="text-center pt-64">
+        <div className="text-center pt-60">
           <div className="texttitle text-3xl text-[#424242]">
             SRI SAIRAM ENGINEERING COLLEGE
           </div>
@@ -49,8 +77,16 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Countdown Timer */}
+      <div className="text-center mt-12 text-4xl font-bold text-[#424242]">
+        <div className="texttitle text-8xl mt-4">
+          {timeLeft.days}d: {timeLeft.hours}h: {timeLeft.minutes}m:{" "}
+          {timeLeft.seconds}s
+        </div>
+      </div>
+
       <div>
-        <div className="w-full pt-10">
+        <div className="w-full pt-2">
           <div className="flex flex-col lg:flex-row items-center gap-2 max-w-7xl mx-auto prose dark:prose-dark text-justify p-4">
             <img
               className="xl:mt-20 2xl:mt-16 h-[250px] lg:mt-32 sm:h-[250px] rounded-2xl mx-auto my-4 pointer-events-none"
