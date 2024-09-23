@@ -49,3 +49,7 @@ body {
 .gradient {
   background: linear-gradient(#faf3e0, #e8cfb0);
 }
+
+.image-card {
+  background-image: url("./assets/background.png");
+}

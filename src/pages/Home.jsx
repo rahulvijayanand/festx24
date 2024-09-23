@@ -37,11 +37,13 @@ const Home = () => {
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+  const zoomFactor = 0.75;
+
   const handleMouseMove = (event) => {
     const rect = event.currentTarget.getBoundingClientRect();
     setMousePosition({
-      x: event.clientX - rect.left, // X position relative to body2
-      y: event.clientY - rect.top, // Y position relative to body2
+      x: (event.clientX - rect.left) / zoomFactor, // Adjust for zoom
+      y: (event.clientY - rect.top) / zoomFactor,  // Adjust for zoom
     });
   };
 
@@ -105,6 +107,9 @@ const Home = () => {
 
       {/* Countdown Timer */}
       <div className="text-center mt-12 text-4xl text-[#424242]">
+        <div className="texttitle text-3xl mt-4">
+         Soon in Silver Screens
+        </div>
         <div className="texttitle text-8xl mt-4">
           {timeLeft.days}d: {timeLeft.hours}h: {timeLeft.minutes}m:{" "}
           {timeLeft.seconds}s
