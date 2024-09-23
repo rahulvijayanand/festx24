@@ -63,7 +63,7 @@ const Home = () => {
           backgroundPosition: "center center",
         }}
       >
-        <div className="text-center pt-60">
+        <div className="text-center pt-64">
           <div className="texttitle text-3xl text-[#424242]">
             SRI SAIRAM ENGINEERING COLLEGE
           </div>
