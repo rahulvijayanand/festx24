@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import hat from "../assets/hat.png";
@@ -6,7 +6,6 @@ import cam from "../assets/camera.png";
 import pic from "../assets/pic.png";
 
 const Navbar = () => {
-  const navRef = useRef();
   const [navs, setNav] = useState(false);
 
   const handleNav = () => {
