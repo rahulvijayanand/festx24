@@ -20,6 +20,10 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 100vh;
+  z-index: 1;
+  position: relative;
+  opacity: 1; /* Ensure the element is not transparent */
+  visibility: visible; /* Ensure visibility is not hidden */
 }
 
 .body3 {

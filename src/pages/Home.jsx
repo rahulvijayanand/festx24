@@ -4,6 +4,7 @@ import SSEC from "../assets/ssec.png";
 import CSBS from "../assets/csbslogo.png";
 import ButtonImage from "../assets/button.png";
 import Arrow from "../assets/arrow.png";
+import FrameImage from "../assets/frame.png";
 
 const Home = () => {
   const calculateTimeLeft = () => {
@@ -34,9 +35,34 @@ const Home = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    setMousePosition({
+      x: event.clientX - rect.left, // X position relative to body2
+      y: event.clientY - rect.top, // Y position relative to body2
+    });
+  };
+
   return (
     <div className="min-h-screen bg-cover bg-center bg-no-repeat items-center justify-center">
-      <div className="body2">
+      {/* Spotlight effect inside body2 */}
+      <div
+        className="body2 relative"
+        onMouseMove={handleMouseMove}
+        style={{
+          backgroundImage: `radial-gradient(
+      circle at ${mousePosition.x}px ${mousePosition.y}px,
+      rgba(255, 255, 255, 0.3) 150px,  /* Brighter area around the cursor */
+      rgba(0, 0, 0, 0.2) 600px,        /* Dark transition zone */
+      rgba(0, 0, 0, 0.4) 1200px         /* Dark outer area */
+    ), url(${FrameImage})`,
+          backgroundSize: "cover", // Ensure both image and gradient cover the entire div
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center center",
+        }}
+      >
         <div className="text-center pt-60">
           <div className="texttitle text-3xl text-[#424242]">
             SRI SAIRAM ENGINEERING COLLEGE
@@ -78,7 +104,7 @@ const Home = () => {
       </div>
 
       {/* Countdown Timer */}
-      <div className="text-center mt-12 text-4xl font-bold text-[#424242]">
+      <div className="text-center mt-12 text-4xl text-[#424242]">
         <div className="texttitle text-8xl mt-4">
           {timeLeft.days}d: {timeLeft.hours}h: {timeLeft.minutes}m:{" "}
           {timeLeft.seconds}s
