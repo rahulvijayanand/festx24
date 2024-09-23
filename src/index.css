@@ -11,7 +11,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  zoom: "100%";
+  zoom: 0.75;
 }
 
 .body2 {
@@ -19,7 +19,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 100vh;
+  min-height: 134vh;
   z-index: 1;
   position: relative;
   opacity: 1; /* Ensure the element is not transparent */
@@ -31,7 +31,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 100vh;
+  min-height: 133vh;
 }
 
 .textnav {

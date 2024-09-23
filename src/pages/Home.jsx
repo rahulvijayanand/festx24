@@ -64,23 +64,23 @@ const Home = () => {
         }}
       >
         <div className="text-center pt-60">
-          <div className="texttitle text-3xl text-[#424242]">
+          <div className="texttitle text-4xl text-[#424242]">
             SRI SAIRAM ENGINEERING COLLEGE
           </div>
-          <div className="texttitle text-3xl mt-2 text-[#424242]">
+          <div className="texttitle text-4xl mt-2 text-[#424242]">
             DEPARTMENT OF COMPUTER
           </div>
-          <div className="texttitle text-3xl mt-2 text-[#424242]">
+          <div className="texttitle text-4xl mt-2 text-[#424242]">
             SCIENCE AND BUSINESS SYSTEMS
           </div>
 
-          <div className="texttitle text-xl mt-8 text-[#424242]">Presents</div>
+          <div className="texttitle text-xl mt-10 text-[#424242]">Presents</div>
 
-          <div className="texthead text-9xl mt-8 text-[#5e5e5e]">FESTX'24</div>
-          <div className="texttitle text-3xl mt-10 text-[#424242]">
+          <div className="texthead text-9xl mt-10 text-[#5e5e5e]">FESTX'24</div>
+          <div className="texttitle text-4xl mt-12 text-[#424242]">
             FESTX Tagline
           </div>
-          <div className="texttitle text-3xl mt-4 text-[#424242]">
+          <div className="texttitle text-4xl mt-6 text-[#424242]">
             October 17th 2024
           </div>
           <div className="flex justify-center mt-12">
