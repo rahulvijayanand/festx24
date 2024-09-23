@@ -76,8 +76,8 @@ const Home = () => {
 
           <div className="texttitle text-xl mt-10 text-[#424242]">Presents</div>
 
-          <div className="texthead text-9xl mt-10 text-[#5e5e5e]">FESTX'24</div>
-          <div className="texttitle text-4xl mt-12 text-[#424242]">
+          <div className="texthead text-[150px] mt-2 text-[#5e5e5e]">FESTX'24</div>
+          <div className="texttitle text-4xl mt-4 text-[#424242]">
             FESTX Tagline
           </div>
           <div className="texttitle text-4xl mt-6 text-[#424242]">
