@@ -5,6 +5,7 @@ import CSBS from "../assets/csbslogo.png";
 import ButtonImage from "../assets/button.png";
 import Arrow from "../assets/arrow.png";
 import FrameImage from "../assets/frame.png";
+import MobileBackground from "../assets/mobileframe.png";
 
 const Home = () => {
   const calculateTimeLeft = () => {
@@ -87,50 +88,53 @@ const Home = () => {
         className="body2 relative"
         onMouseMove={handleMouseMove}
         style={{
-          backgroundImage: `radial-gradient(
+          backgroundImage:
+            window.innerWidth < 768
+              ? `url(${MobileBackground})` // Use mobile background
+              : `radial-gradient(
             circle at ${mousePosition.x}px ${mousePosition.y}px,
             rgba(255, 255, 255, 0.3) 150px,
             rgba(0, 0, 0, 0.2) 600px,
             rgba(0, 0, 0, 0.4) 1200px
-          ), url(${FrameImage})`,
+          ), url(${FrameImage})`, // Use desktop background
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center center",
         }}
       >
         <div className="text-center pt-64">
-          <div className="texttitle text-3xl text-[#424242]">
+          <div className="texttitle text-2xl sm:text-3xl text-[#424242]">
             SRI SAIRAM ENGINEERING COLLEGE
           </div>
-          <div className="texttitle text-3xl mt-2 text-[#424242]">
+          <div className="texttitle text-2xl sm:text-3xl mt-2 text-[#424242]">
             DEPARTMENT OF COMPUTER
           </div>
-          <div className="texttitle text-3xl mt-2 text-[#424242]">
+          <div className="texttitle text-2xl sm:text-3xl mt-2 text-[#424242]">
             SCIENCE AND BUSINESS SYSTEMS
           </div>
 
           <div className="texttitle text-xl mt-8 text-[#424242]">Presents</div>
 
-          <div className="texthead text-9xl mt-8 text-[#5e5e5e]">FESTX'24</div>
-          <div className="texttitle text-3xl mt-10 text-[#424242]">
+          <div className="texthead text-6xl sm:text-9xl mt-8 text-[#5e5e5e]">FESTX'24</div>
+          <div className="texttitle text-2xl sm:text-3xl mt-10 text-[#424242]">
             FESTX Tagline
           </div>
-          <div className="texttitle text-3xl mt-4 text-[#424242]">
+          <div className="texttitle text-2xl sm:text-3xl mt-4 text-[#424242]">
             October 17th 2024
           </div>
           <div className="flex justify-center mt-12">
-            <button className="relative flex items-center justify-center text-white text-2xl font-bold group">
+            <button className="relative flex items-center justify-center text-white text-xl sm:text-2xl font-bold group">
               <img
                 src={ButtonImage}
                 alt="Button"
-                className="w-[340px] h-[90px] rounded-2xl transition-all duration-300 group-hover:brightness-150 group-hover:sepia"
+                className="w-[250px] sm:w-[340px] h-[70px] sm:h-[90px] rounded-2xl transition-all duration-300 group-hover:brightness-150 group-hover:sepia"
               />
               <span className="absolute flex items-center text-white transition-all duration-300 group-hover:text-black">
                 <span className="texttitle mr-2">Register now</span>
                 <img
                   src={Arrow}
                   alt="arrow"
-                  className="w-[25px] h-[25px] mt-1 ml-3 transition-all duration-300 transform group-hover:rotate-45 group-hover:invert"
+                  className="w-[20px] sm:w-[25px] h-[20px] sm:h-[25px] mt-1 ml-3 transition-all duration-300 transform group-hover:rotate-45 group-hover:invert"
                 />
               </span>
             </button>
@@ -139,9 +143,9 @@ const Home = () => {
       </div>
 
       {/* Countdown Timer */}
-      <div className="text-center mt-12 text-4xl text-[#424242]">
-        <div className="texttitle text-3xl mt-4">Soon in Silver Screens</div>
-        <div className="texttitle text-8xl mt-4">
+      <div className="text-center mt-12 text-3xl sm:text-4xl text-[#424242]">
+        <div className="texttitle text-2xl sm:text-3xl mt-4">Soon in Silver Screens</div>
+        <div className="texttitle text-6xl sm:text-8xl mt-4">
           {timeLeft.days}d: {timeLeft.hours}h: {timeLeft.minutes}m:{" "}
           {timeLeft.seconds}s
         </div>
@@ -155,7 +159,7 @@ const Home = () => {
             className="fade-in flex flex-col lg:flex-row items-center gap-2 max-w-7xl mx-auto prose dark:prose-dark text-justify p-4"
           >
             <img
-              className="xl:mt-20 2xl:mt-16 h-[250px] lg:mt-32 sm:h-[250px] rounded-2xl mx-auto my-4 pointer-events-none"
+              className="xl:mt-20 2xl:mt-16 h-[200px] sm:h-[250px] lg:h-[250px] rounded-2xl mx-auto my-4 pointer-events-none"
               src={Logo}
               alt="/"
             />
@@ -164,7 +168,7 @@ const Home = () => {
                 FESTX is an annual symposium hosted by the Department of
                 Computer Science and Business Systems of Sri Sairam Engineering
                 College to promote the spirit of Entrepreneurship and to explore
-                the latest tech trends. FESTX'23 is a two day programme hosted
+                the latest tech trends. FESTX'23 is a two-day program hosted
                 by the Department of Computer Science and Business Systems which
                 has 7 unique inter-collegiate events.
               </p>
@@ -184,7 +188,7 @@ const Home = () => {
               <img
                 src={SSEC}
                 alt="sseclogo"
-                className="xl:mt-20 w-[250px] 2xl:mt-16 h-[250px] lg:mt-32 rounded-2xl mx-auto my-4 pointer-events-none"
+                className="xl:mt-20 w-[200px] sm:w-[250px] 2xl:mt-16 h-[200px] sm:h-[250px] lg:mt-32 rounded-2xl mx-auto my-4 pointer-events-none"
               />
             </div>
             <p className="texttitle text-justify 2xl:pr-auto px-10 lg:text-2xl md:text-xl sm:text-1xl mt-10">
@@ -200,7 +204,7 @@ const Home = () => {
           </div>
           <div className="hidden lg:block">
             <img
-              className="lg:w-[1500px] h-[250px] md:w-[1500px] rounded-2xl mx-auto my-4 pointer-events-none"
+              className="lg:w-[1500px] h-[200px] md:w-[1500px] rounded-2xl mx-auto my-4 pointer-events-none"
               src={SSEC}
               alt="/"
             />
@@ -214,7 +218,7 @@ const Home = () => {
           className="fade-in flex flex-col lg:flex-row items-center gap-2 max-w-7xl mx-auto prose dark:prose-dark text-justify p-4"
         >
           <img
-            className="xl:mt-20 w-[250px] 2xl:mt-16 h-[250px] lg:mt-32 rounded-2xl mx-auto my-4 pointer-events-none"
+            className="xl:mt-20 w-[200px] sm:w-[250px] 2xl:mt-16 h-[200px] sm:h-[250px] lg:mt-32 rounded-2xl mx-auto my-4 pointer-events-none"
             src={CSBS}
             alt="/"
           />
@@ -224,7 +228,7 @@ const Home = () => {
               among students and parents likewise as Candidates from this field
               play a vital role in software development and possess the
               appropriate managerial skills, which will unlock a lot of career
-              opportunities such as being a consultant and much more.It is
+              opportunities such as being a consultant and much more. It is
               curated to create business engineers that ensures their futuristic
               and holistic development.
             </p>
