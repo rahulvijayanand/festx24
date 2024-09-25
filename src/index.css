@@ -8,6 +8,7 @@
 
 body {
   background-image: url("./assets/background.png");
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -20,10 +21,11 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 134vh;
+  max-height: 134vh;
   z-index: 1;
   position: relative;
-  opacity: 1; /* Ensure the element is not transparent */
-  visibility: visible; /* Ensure visibility is not hidden */
+  opacity: 1;
+  visibility: visible;
 }
 
 .body3 {
@@ -32,6 +34,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 133vh;
+  max-height: 133vh;
 }
 
 .textnav {
@@ -52,4 +55,24 @@ body {
 
 .image-card {
   background-image: url("./assets/background.png");
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }

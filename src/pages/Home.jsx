@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Logo from "../assets/festxlogo.png";
 import SSEC from "../assets/ssec.png";
 import CSBS from "../assets/csbslogo.png";
@@ -42,25 +42,58 @@ const Home = () => {
   const handleMouseMove = (event) => {
     const rect = event.currentTarget.getBoundingClientRect();
     setMousePosition({
-      x: (event.clientX - rect.left) / zoomFactor, // Adjust for zoom
-      y: (event.clientY - rect.top) / zoomFactor,  // Adjust for zoom
+      x: (event.clientX - rect.left) / zoomFactor,
+      y: (event.clientY - rect.top) / zoomFactor,
     });
   };
 
+  // Ref for observing elements
+  const fadeElementsRef = useRef([]);
+
+  // Scroll Observer function
+  const handleScrollObserver = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show"); // Apply the show class to fade in
+      }
+    });
+  };
+
+  useEffect(() => {
+    const elements = fadeElementsRef.current; // Store current ref in a local variable
+
+    const observer = new IntersectionObserver(handleScrollObserver, {
+      threshold: 0.1, // Trigger when 10% of the element is in view
+    });
+
+    elements.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-cover bg-center bg-no-repeat items-center justify-center">
-      {/* Spotlight effect inside body2 */}
       <div
         className="body2 relative"
         onMouseMove={handleMouseMove}
         style={{
           backgroundImage: `radial-gradient(
-      circle at ${mousePosition.x}px ${mousePosition.y}px,
-      rgba(255, 255, 255, 0.3) 150px,  /* Brighter area around the cursor */
-      rgba(0, 0, 0, 0.2) 600px,        /* Dark transition zone */
-      rgba(0, 0, 0, 0.4) 1200px         /* Dark outer area */
-    ), url(${FrameImage})`,
-          backgroundSize: "cover", // Ensure both image and gradient cover the entire div
+            circle at ${mousePosition.x}px ${mousePosition.y}px,
+            rgba(255, 255, 255, 0.3) 150px,
+            rgba(0, 0, 0, 0.2) 600px,
+            rgba(0, 0, 0, 0.4) 1200px
+          ), url(${FrameImage})`,
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center center",
         }}
@@ -107,18 +140,20 @@ const Home = () => {
 
       {/* Countdown Timer */}
       <div className="text-center mt-12 text-4xl text-[#424242]">
-        <div className="texttitle text-3xl mt-4">
-         Soon in Silver Screens
-        </div>
+        <div className="texttitle text-3xl mt-4">Soon in Silver Screens</div>
         <div className="texttitle text-8xl mt-4">
           {timeLeft.days}d: {timeLeft.hours}h: {timeLeft.minutes}m:{" "}
           {timeLeft.seconds}s
         </div>
       </div>
 
+      {/* Fade-in Section */}
       <div>
         <div className="w-full pt-2">
-          <div className="flex flex-col lg:flex-row items-center gap-2 max-w-7xl mx-auto prose dark:prose-dark text-justify p-4">
+          <div
+            ref={(el) => (fadeElementsRef.current[0] = el)}
+            className="fade-in flex flex-col lg:flex-row items-center gap-2 max-w-7xl mx-auto prose dark:prose-dark text-justify p-4"
+          >
             <img
               className="xl:mt-20 2xl:mt-16 h-[250px] lg:mt-32 sm:h-[250px] rounded-2xl mx-auto my-4 pointer-events-none"
               src={Logo}
@@ -138,9 +173,12 @@ const Home = () => {
         </div>
       </div>
 
-      <br />
+      {/* Additional Fade-in Section */}
       <div className="w-full">
-        <div className="flex flex-col lg:flex-row items-center gap-2 max-w-7xl mx-auto prose dark:prose-dark text-justify p-4">
+        <div
+          ref={(el) => (fadeElementsRef.current[1] = el)}
+          className="fade-in flex flex-col lg:flex-row items-center gap-2 max-w-7xl mx-auto prose dark:prose-dark text-justify p-4"
+        >
           <div className="xl:col-span-2 flex flex-col justify-center">
             <div className="block lg:hidden lg:pt-52">
               <img
@@ -170,16 +208,18 @@ const Home = () => {
         </div>
       </div>
 
-      <br />
       <div className="w-full">
-        <div className="flex flex-col lg:flex-row items-center gap-2 max-w-7xl mx-auto prose dark:prose-dark text-justify p-4">
+        <div
+          ref={(el) => (fadeElementsRef.current[2] = el)}
+          className="fade-in flex flex-col lg:flex-row items-center gap-2 max-w-7xl mx-auto prose dark:prose-dark text-justify p-4"
+        >
           <img
             className="xl:mt-20 w-[250px] 2xl:mt-16 h-[250px] lg:mt-32 rounded-2xl mx-auto my-4 pointer-events-none"
             src={CSBS}
             alt="/"
           />
           <div className="xl:col-span-2 flex flex-col justify-center ">
-            <p className="texttitle  text-justify px-10 2xl:pr-auto lg:text-2xl md:text-xl sm:text-1xl mt-10">
+            <p className="texttitle text-justify px-10 2xl:pr-auto lg:text-2xl md:text-xl sm:text-1xl mt-10">
               CSBS is a steadily growing department and is gaining popularity
               among students and parents likewise as Candidates from this field
               play a vital role in software development and possess the

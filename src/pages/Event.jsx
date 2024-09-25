@@ -1,7 +1,19 @@
 import React from "react";
-import ImageCard from "../components/EventComp";
+import ImageCard from "../components/ImageCard"; // Assuming ImageCard component is imported
 
 function Event() {
+  // Array of image URLs
+  const images = [
+    "https://via.placeholder.com/350x400?text=Image+1",
+    "https://via.placeholder.com/350x400?text=Image+2",
+    "https://via.placeholder.com/350x400?text=Image+3",
+    "https://via.placeholder.com/350x400?text=Image+4",
+    "https://via.placeholder.com/350x400?text=Image+5",
+    "https://via.placeholder.com/350x400?text=Image+6",
+    "https://via.placeholder.com/350x400?text=Image+7",
+    "https://via.placeholder.com/350x400?text=Image+8",
+  ];
+
   return (
     <div>
       {/* Section for the "Events" header */}
@@ -13,12 +25,17 @@ function Event() {
         </div>
       </div>
 
-      {/* Image Card Section */}
-      <div className="flex justify-center my-12">
-        <ImageCard
-          imageSrc="" // Empty or pass actual image URL like './assets/sample-event.jpg'
-          onButtonClick={() => console.log("View more clicked!")}
-        />
+      {/* Scrollable Image Card Section */}
+      <div className="flex overflow-x-scroll space-x-20 px-8 py-12 scrollbar-hide">
+        {images.map((imageSrc, index) => (
+          <ImageCard
+            key={index}
+            imageSrc={imageSrc}
+            onButtonClick={() =>
+              console.log(`View more clicked on Image ${index + 1}`)
+            }
+          />
+        ))}
       </div>
     </div>
   );
