@@ -76,3 +76,13 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 640px) {
+  .body3 {
+    background-image: url("./assets/bg2.png");
+    background-size: cover;
+    background-position: top center;
+    min-height: 35vh;
+    max-height: none;
+  }
+}

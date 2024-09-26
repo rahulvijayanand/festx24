@@ -204,7 +204,7 @@ const Home = () => {
           </div>
           <div className="hidden lg:block">
             <img
-              className="lg:w-[1500px] h-[200px] md:w-[1500px] rounded-2xl mx-auto my-4 pointer-events-none"
+              className="lg:w-[1500px] h-[250px] md:w-[1500px] rounded-2xl mx-auto my-4 pointer-events-none"
               src={SSEC}
               alt="/"
             />
