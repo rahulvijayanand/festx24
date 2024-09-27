@@ -82,7 +82,15 @@ body {
     background-image: url("./assets/bg2.png");
     background-size: cover;
     background-position: top center;
-    min-height: 35vh;
+    min-height: 50vh;
+    max-height: none;
+  }
+
+  .body2 {
+    background-image: url("./assets/mobileframe.png");
+    background-size: contain;
+    background-position: top center;
+    min-height: 60vh;
     max-height: none;
   }
 }

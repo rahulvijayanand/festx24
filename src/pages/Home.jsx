@@ -102,7 +102,7 @@ const Home = () => {
           backgroundPosition: "center center",
         }}
       >
-        <div className="text-center pt-64">
+        <div className="text-center pt-40 pb-12 md:pt-32 lg:pt-64">
           <div className="texttitle text-2xl sm:text-3xl text-[#424242]">
             SRI SAIRAM ENGINEERING COLLEGE
           </div>
@@ -145,12 +145,11 @@ const Home = () => {
       {/* Countdown Timer */}
       <div className="text-center mt-12 text-3xl sm:text-4xl text-[#424242]">
         <div className="texttitle text-2xl sm:text-3xl mt-4">Soon in Silver Screens</div>
-        <div className="texttitle text-6xl sm:text-8xl mt-4">
+        <div className="texttitle text-5xl sm:text-8xl mt-4">
           {timeLeft.days}d: {timeLeft.hours}h: {timeLeft.minutes}m:{" "}
           {timeLeft.seconds}s
         </div>
       </div>
-
       {/* Fade-in Section */}
       <div>
         <div className="w-full pt-2">

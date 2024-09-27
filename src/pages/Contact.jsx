@@ -4,12 +4,14 @@ import borderImage from "../assets/border.png"; // Adjust the path as necessary
 
 function Contact() {
   const contacts = [
-    { title: "Chairman", name: "Tharun Raj R G", contact: "8072929254" },
-    { title: "Vice Chairman", name: "John Doe", contact: "8123456789" },
-    { title: "Secretary", name: "Jane Smith", contact: "9123456789" },
-    { title: "Treasurer", name: "Alex Brown", contact: "8323456789" },
-    { title: "Coordinator", name: "Lisa White", contact: "8523456789" },
-    { title: "Coordinator", name: "Mike Johnson", contact: "8623456789" },
+    { title: "Chairperson", name: "Tharun Raj R G", contact: "8072929254" },
+    { title: "Vice Chairperson", name: "Sanjana P", contact: "8123456789" },
+    { title: "Secretary", name: "Aravind A C", contact: "9123456789" },
+    { title: "Treasurer", name: "Vijayasubash E", contact: "8323456789" },
+    { title: "Joint Secretary", name: "Balaji P", contact: "9123456789" },
+    { title: "Joint Secretary", name: "K Sathish Kumar", contact: "8323456789" },
+    { title: "Coordinator", name: "Harson M", contact: "8523456789" },
+    { title: "Coordinator", name: "Elakkiya S", contact: "8623456789" },
   ];
 
   return (
