@@ -16,7 +16,7 @@ function Event() {
       link: "https://forms.gle/p4acWkFCFcvPCpPs9",
     },
     {
-      imageLink: "https://i.ibb.co/vhctbP6/Auction-Antony.png",
+      imageLink: "https://i.ibb.co/PtgRr3g/Auction-Antony.png",
       name: "Auction Antony",
       description: `Welcome to the world of Mark Antony, mamaaae!Get ready for "Auction Antony" an exhilarating event that blendsknowledge with strategy! Dive into a thrilling auction where you'll bid toassemble your dream team of professionals, using cunning and creativity to outsmart your rivals. Navigate unexpected twists and surprises as you make strategic decisions in real time. Join us for this captivating experience and seize the opportunity to claim fantastic prizes. Don’t miss out—register now and unleash your inner mastermind! Auction la ennada fun uh, Fun la ennada Auction uh, Auction na Funuh!! Fun nah Auction uh!`,
       mode: "Multiplayer",
