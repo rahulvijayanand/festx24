@@ -77,7 +77,7 @@ as AI transforms nostalgic themes into new artistic interpretations. `,
       link: "https://forms.gle/sH1x8XYEpyFqQQGS6",
     },
     {
-      imageLink: "https://i.ibb.co/vhctbP6/Auction-Antony.png",
+      imageLink: "https://i.ibb.co/f80SryR/flashbackfusion.jpg",
       name: "Flashback Fusion",
       description: `The Retro Social Media Marketing Challenge is designed to creatively merge the charm of retro marketing with the innovation of modern technology. In this event, participants are tasked with promoting current-generation technology products that were not invented in the 1980s or 1990s. Participants must produce a 30 seconds to 1 minute marketing video that reflects the marketing techniques of the 1980s and 1990s, evoking nostalgia while showcasing today's advanced products. A key twist in this challenge is that participants must include a famous Tamil cinema dialogue in their videos. This dialogue should be integrated in a way that enhances the promotion of the product, adding a cultural and humorous flavor. The event celebrates creativity, storytelling and the clever blending of retro vibes with futuristic products. Participants have five days prior to the event to conceptualize, record and edit their videos. On the day of the event, all entries will be showcased and the best ones will be awarded based on specific criteria.
 `,
