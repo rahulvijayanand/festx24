@@ -4,12 +4,12 @@ import borderImage from "../assets/border.png"; // Adjust the path as necessary
 
 function Contact() {
   const contacts = [
-    { title: "Chairperson", name: "Tharun Raj R G", contact: "8072929254" },
-    { title: "Vice Chairperson", name: "Sanjana P", contact: "8123456789" },
-    { title: "Secretary", name: "Aravind A C", contact: "9123456789" },
-    { title: "Treasurer", name: "Vijayasubash E", contact: "8323456789" },
-    { title: "Joint Secretary", name: "Balaji P", contact: "9123456789" },
-    { title: "Joint Secretary", name: "K Sathish Kumar", contact: "8323456789" },
+    { title: "Chairperson", name: "Tharun Raj R G", contact: "+91 80729 29254" },
+    { title: "Vice Chairperson", name: "Sanjana P", contact: "+91 86672 17577" },
+    { title: "Secretary", name: "Aravind A C", contact: "+91 95858 00137" },
+    { title: "Treasurer", name: "Vijayasubash E", contact: "+91 85239 31098" },
+    { title: "Joint Secretary", name: "Balaji P", contact: "+91 93607 41096" },
+    { title: "Joint Secretary", name: "K Sathish Kumar", contact: "+91 93448 05365" },
 
   ];
 

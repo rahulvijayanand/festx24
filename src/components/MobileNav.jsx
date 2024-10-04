@@ -29,13 +29,13 @@ const Navbar = () => {
             onClick={toggleNavbar}
           />
           <nav className="mt-12 flex flex-col space-y-4">
-            <a href="#home" className="text-black text-lg font-semibold">
+            <a href="/home" className="text-black text-lg font-semibold">
               Home
             </a>
-            <a href="#events" className="text-black text-lg font-semibold">
+            <a href="/events" className="text-black text-lg font-semibold">
               Events
             </a>
-            <a href="#contact" className="text-black text-lg font-semibold">
+            <a href="/contact" className="text-black text-lg font-semibold">
               Contact Us
             </a>
           </nav>
