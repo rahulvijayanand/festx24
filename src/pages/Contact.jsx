@@ -41,7 +41,7 @@ function Contact() {
       </div>
 
       {/* Subheading */}
-      <div className="text-center text-2xl sm:text-3xl md:text-4xl mt-6 texttitle">
+      <div className="text-center text-2xl sm:text-3xl md:text-4xl mt-6 texttitle text-white">
         Student Coordinators
       </div>
 
