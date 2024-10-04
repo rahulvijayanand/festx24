@@ -92,22 +92,22 @@ const Home = () => {
   className="body2 relative"
   onMouseMove={handleMouseMove}
   style={{
-    backgroundImage: window.innerWidth < 768 ? `url(${MobileBackground})` : "none",
+    backgroundImage: window.innerWidth < 768 ? `none` : "none",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
   }}
 >
-  <img
-    src={LeftFrame} // Import this image at the top with the other assets
+<img
+    src={LeftFrame}
     alt="Frame 1"
-    className="absolute left-0 slide-in-left"
+    className="absolute left-0 slide-in-left sm:pt-0 pt-96" // Add padding for mobile view
     style={{ top: 0, zIndex: -10 }}
   />
   <img
-    src={RightFrame} // Import this image at the top with the other assets
+    src={RightFrame}
     alt="Frame 2"
-    className="absolute right-0 slide-in-right"
+    className="absolute right-0 slide-in-right sm:pt-0 pt-96" // Add padding for mobile view
     style={{ top: 0, zIndex: -10 }}
   />
   
