@@ -222,7 +222,7 @@ const Home = () => {
           </div>
           <div className="hidden lg:block">
             <img
-              className="lg:w-[1500px] h-[250px] md:w-[1500px] rounded-2xl mx-auto my-4 pointer-events-none"
+              className="lg:w-[1500px] h-[250px] md:w-[1500px] rounded-2xl mx-auto my-4 pointer-events-none object-contain"
               src={SSEC}
               alt="/"
             />
@@ -236,7 +236,7 @@ const Home = () => {
           className="fade-in flex flex-col lg:flex-row items-center gap-2 max-w-7xl mx-auto prose dark:prose-dark text-justify p-4"
         >
           <img
-            className="xl:mt-20 w-[200px] sm:w-[250px] 2xl:mt-16 h-[200px] sm:h-[250px] lg:mt-32 rounded-2xl mx-auto my-4 pointer-events-none"
+            className="xl:mt-20 w-[200px] sm:w-[250px] 2xl:mt-16 h-[200px] sm:h-[250px] lg:mt-32 rounded-2xl mx-auto my-4 pointer-events-none object-contain"
             src={CSBS}
             alt="/"
           />
