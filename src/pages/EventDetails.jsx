@@ -45,18 +45,18 @@ const EventDetails = () => {
   return (
     <div>
       <div className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center lg:justify-center body3">
-        <div className="flex w-full">
+        <div className="flex flex-col lg:flex-row w-full">
           {/* Left Div with Image */}
           <motion.div
             variants={fadeIn("left")}
             initial="hidden"
             animate="show"
-            className="w-1/2 flex items-center justify-center"
+            className="w-full lg:w-1/2 flex items-center justify-center"
           >
             <img
               src={imageLink} // Use image link from props
               alt="Event"
-              className="rounded-lg shadow-lg max-w-full h-[500px]"
+              className="rounded-lg shadow-lg max-w-full lg:h-[500px] h-auto"
             />
           </motion.div>
 
@@ -65,14 +65,14 @@ const EventDetails = () => {
             variants={fadeIn("right")}
             initial="hidden"
             animate="show"
-            className="w-1/2 flex flex-col items-center justify-center p-6"
+            className="w-full lg:w-1/2 flex flex-col items-center justify-center p-6"
           >
-            <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-6 shadow-lg w-full max-w-lg h-[500px]">
+            <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-6 shadow-lg w-full max-w-lg lg:h-[500px]">
               <h2 className="text-4xl font-bold mb-4 text-center text-black texthead">
                 {name}
               </h2>
               <p
-                className="texttitle text-justify lg:text-2xl lg:mt-20 md:text-xl sm:text-1xl mt-10 overflow-y-auto h-[300px]"
+                className="texttitle text-justify lg:text-2xl lg:mt-20 md:text-xl sm:text-1xl mt-10 overflow-y-auto lg:h-[300px]"
                 style={{ overflowY: "auto" }} // Scrollable description
               >
                 {description}
