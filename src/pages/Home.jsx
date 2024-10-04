@@ -11,6 +11,7 @@ import MobileBackground from "../assets/mobileframe.png";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  
   const calculateTimeLeft = () => {
     const targetDate = new Date("October 17, 2024 09:00:00").getTime();
     const now = new Date().getTime();
@@ -186,9 +187,9 @@ const Home = () => {
                 FESTX is an annual symposium hosted by the Department of
                 Computer Science and Business Systems of Sri Sairam Engineering
                 College to promote the spirit of Entrepreneurship and to explore
-                the latest tech trends. FESTX'23 is a two-day program hosted by
+                the latest tech trends. FESTX'24 is a program hosted by
                 the Department of Computer Science and Business Systems which
-                has 7 unique inter-collegiate events.
+                has 8 unique inter-collegiate events.
               </p>
             </div>
           </div>

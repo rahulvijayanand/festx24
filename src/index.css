@@ -11,6 +11,20 @@ body {
   zoom: 0.75;
 }
 
+.torch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+  pointer-events: none; /* Allow interaction through the overlay */
+  mask-image: radial-gradient(circle 100px at 50% 50%, transparent 100px, black 200px);
+  mask-size: 100vw 100vh;
+  mask-repeat: no-repeat;
+  transition: mask-position 0.05s ease;
+}
+
 .body2 {
   background-image: url("./assets/frame.png");
   background-size: cover;
