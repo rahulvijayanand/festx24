@@ -115,25 +115,25 @@ const Home = () => {
 
 
         <div className="text-center pt-40 pb-12 md:pt-32 lg:pt-64">
-          <div className="texttitle text-2xl sm:text-3xl text-[#424242]">
+          <div className="texttitle text-2xl sm:text-3xl text-white">
             SRI SAIRAM ENGINEERING COLLEGE
           </div>
-          <div className="texttitle text-2xl sm:text-3xl mt-2 text-[#424242]">
+          <div className="texttitle text-2xl sm:text-3xl mt-2 text-white">
             DEPARTMENT OF COMPUTER
           </div>
-          <div className="texttitle text-2xl sm:text-3xl mt-2 text-[#424242]">
+          <div className="texttitle text-2xl sm:text-3xl mt-2 text-white">
             SCIENCE AND BUSINESS SYSTEMS
           </div>
 
-          <div className="texttitle text-xl mt-8 text-[#424242]">Presents</div>
+          <div className="texttitle text-xl mt-8 text-white">Presents</div>
 
-          <div className="texthead text-6xl sm:text-9xl mt-8 text-[#5e5e5e]">
+          <div className="texthead text-6xl sm:text-9xl mt-8 text-white">
             FESTX'24
           </div>
-          <div className="texttitle text-2xl sm:text-3xl mt-10 text-[#424242]">
+          <div className="texttitle text-2xl sm:text-3xl mt-10 text-white">
             Non-Stop Kondattam
           </div>
-          <div className="texttitle text-2xl sm:text-3xl mt-4 text-[#424242]">
+          <div className="texttitle text-2xl sm:text-3xl mt-4 text-white">
             October 17th 2024
           </div>
           <div className="flex justify-center mt-12">
@@ -160,7 +160,7 @@ const Home = () => {
       </div>
 
       {/* Countdown Timer */}
-      <div className="text-center mt-12 text-3xl sm:text-4xl text-[#424242]">
+      <div className="text-center mt-12 text-3xl sm:text-4xl text-white">
         <div className="texttitle text-2xl sm:text-3xl mt-4">
           Soon in Silver Screens
         </div>
@@ -182,7 +182,7 @@ const Home = () => {
               alt="/"
             />
             <div className="xl:col-span-2 flex flex-col justify-center">
-              <p className="texttitle text-justify 2xl:pr-auto px-10 lg:text-2xl lg:mt-20 md:text-xl sm:text-1xl mt-10">
+              <p className="texttitle text-justify 2xl:pr-auto px-10 lg:text-2xl lg:mt-20 md:text-xl sm:text-1xl mt-10 text-white">
                 FESTX is an annual symposium hosted by the Department of
                 Computer Science and Business Systems of Sri Sairam Engineering
                 College to promote the spirit of Entrepreneurship and to explore
@@ -209,7 +209,7 @@ const Home = () => {
                 className="xl:mt-20 w-[200px] sm:w-[250px] 2xl:mt-16 h-[200px] sm:h-[250px] lg:mt-32 rounded-2xl mx-auto my-4 pointer-events-none"
               />
             </div>
-            <p className="texttitle text-justify 2xl:pr-auto px-10 lg:text-2xl md:text-xl sm:text-1xl mt-10">
+            <p className="texttitle text-justify 2xl:pr-auto px-10 lg:text-2xl md:text-xl sm:text-1xl mt-10 text-white">
               Sri Sairam Engineering College, Chennai, established in the year
               1995 by MJF.Ln.Leo Muthu, Chairman of Sapthagiri Educational
               Trust, is a non-profitable and a non-minority institution. A
@@ -240,8 +240,9 @@ const Home = () => {
             src={CSBS}
             alt="/"
           />
+          
           <div className="xl:col-span-2 flex flex-col justify-center ">
-            <p className="texttitle text-justify px-10 2xl:pr-auto lg:text-2xl md:text-xl sm:text-1xl mt-10">
+            <p className="texttitle text-justify px-10 2xl:pr-auto lg:text-2xl md:text-xl sm:text-1xl mt-10 text-white">
               CSBS is a steadily growing department and is gaining popularity
               among students and parents likewise as Candidates from this field
               play a vital role in software development and possess the

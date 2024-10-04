@@ -16,21 +16,21 @@ const Navbar = () => {
       >
         <Link
           to="/"
-          className="textnav zoom p-3 transition-transform duration-300 mx-auto hover:scale-150 text-lg"
+          className="textnav zoom p-3 transition-transform duration-300 mx-auto hover:scale-150 font-bold text-2xl"
           onClick={() => scrollToTop()}
         >
           Home
         </Link>
         <Link
           to="/events"
-          className="textnav zoom p-3 transition-transform duration-300 mx-auto hover:scale-150 text-lg"
+          className="textnav zoom p-3 transition-transform duration-300 mx-auto hover:scale-150 font-bold text-2xl"
           onClick={() => scrollToTop()}
         >
           Events
         </Link>
         <Link
           to="/contact"
-          className="textnav zoom p-3 transition-transform duration-300 mx-auto hover:scale-150 text-lg"
+          className="textnav zoom p-3 transition-transform duration-300 mx-auto hover:scale-150 font-bold text-2xl"
           onClick={() => scrollToTop()}
         >
           Contact Us

@@ -30,7 +30,7 @@ function App() {
     <>
       {/* Show Navbar for desktop view and MobileNav for mobile view */}
       {isMobile ? <MobileNav /> : <Navbar />}
-      <div>
+      <div className="bg-[#181a1b]">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.key}>
             <Route
