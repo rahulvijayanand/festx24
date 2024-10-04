@@ -28,6 +28,23 @@ body {
   visibility: visible;
 }
 
+.bodyCurtain {
+  background-image: url("./assets/MovieCurtain.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 133vh;
+  max-height: 133vh;
+}
+.bodyContact {
+  background-image: url("./assets/virumaandibg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 133vh;
+  max-height: 133vh;
+}
+
 .body3 {
   background-image: url("./assets/bg2.png");
   background-size: cover;
@@ -76,6 +93,38 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Slide-in Animation */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 4s forwards;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 4s forwards;
+}
+
 
 @media (max-width: 640px) {
   .body3 {

@@ -4,8 +4,11 @@ import SSEC from "../assets/ssec.png";
 import CSBS from "../assets/csbslogo.png";
 import ButtonImage from "../assets/button.png";
 import Arrow from "../assets/arrow.png";
-import FrameImage from "../assets/frame.png";
+import FrameImage from "../assets/doublex.png";
+import LeftFrame from "../assets/doublexleft.png";
+import RightFrame from "../assets/doublexright.png";
 import MobileBackground from "../assets/mobileframe.png";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const calculateTimeLeft = () => {
@@ -81,27 +84,36 @@ const Home = () => {
       });
     };
   }, []);
-
+  const navigate=useNavigate();
   return (
     <div className="min-h-screen bg-cover bg-center bg-no-repeat items-center justify-center">
+      
       <div
-        className="body2 relative"
-        onMouseMove={handleMouseMove}
-        style={{
-          backgroundImage:
-            window.innerWidth < 768
-              ? `url(${MobileBackground})` // Use mobile background
-              : `radial-gradient(
-            circle at ${mousePosition.x}px ${mousePosition.y}px,
-            rgba(255, 255, 255, 0.3) 150px,
-            rgba(0, 0, 0, 0.2) 600px,
-            rgba(0, 0, 0, 0.4) 1200px
-          ), url(${FrameImage})`, // Use desktop background
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center center",
-        }}
-      >
+  className="body2 relative"
+  onMouseMove={handleMouseMove}
+  style={{
+    backgroundImage: window.innerWidth < 768 ? `url(${MobileBackground})` : "none",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center",
+  }}
+>
+  <img
+    src={LeftFrame} // Import this image at the top with the other assets
+    alt="Frame 1"
+    className="absolute left-0 slide-in-left"
+    style={{ top: 0, zIndex: -10 }}
+  />
+  <img
+    src={RightFrame} // Import this image at the top with the other assets
+    alt="Frame 2"
+    className="absolute right-0 slide-in-right"
+    style={{ top: 0, zIndex: -10 }}
+  />
+  
+  {/* Existing content here */}
+
+
         <div className="text-center pt-40 pb-12 md:pt-32 lg:pt-64">
           <div className="texttitle text-2xl sm:text-3xl text-[#424242]">
             SRI SAIRAM ENGINEERING COLLEGE
@@ -115,15 +127,20 @@ const Home = () => {
 
           <div className="texttitle text-xl mt-8 text-[#424242]">Presents</div>
 
-          <div className="texthead text-6xl sm:text-9xl mt-8 text-[#5e5e5e]">FESTX'24</div>
+          <div className="texthead text-6xl sm:text-9xl mt-8 text-[#5e5e5e]">
+            FESTX'24
+          </div>
           <div className="texttitle text-2xl sm:text-3xl mt-10 text-[#424242]">
-            FESTX Tagline
+            Non-Stop Kondattam
           </div>
           <div className="texttitle text-2xl sm:text-3xl mt-4 text-[#424242]">
             October 17th 2024
           </div>
           <div className="flex justify-center mt-12">
-            <button className="relative flex items-center justify-center text-white text-xl sm:text-2xl font-bold group">
+            <button
+              className="relative flex items-center justify-center text-white text-xl sm:text-2xl font-bold group"
+              onClick={() => navigate("/events")}
+            >
               <img
                 src={ButtonImage}
                 alt="Button"
@@ -144,7 +161,9 @@ const Home = () => {
 
       {/* Countdown Timer */}
       <div className="text-center mt-12 text-3xl sm:text-4xl text-[#424242]">
-        <div className="texttitle text-2xl sm:text-3xl mt-4">Soon in Silver Screens</div>
+        <div className="texttitle text-2xl sm:text-3xl mt-4">
+          Soon in Silver Screens
+        </div>
         <div className="texttitle text-5xl sm:text-8xl mt-4">
           {timeLeft.days}d: {timeLeft.hours}h: {timeLeft.minutes}m:{" "}
           {timeLeft.seconds}s
@@ -167,8 +186,8 @@ const Home = () => {
                 FESTX is an annual symposium hosted by the Department of
                 Computer Science and Business Systems of Sri Sairam Engineering
                 College to promote the spirit of Entrepreneurship and to explore
-                the latest tech trends. FESTX'23 is a two-day program hosted
-                by the Department of Computer Science and Business Systems which
+                the latest tech trends. FESTX'23 is a two-day program hosted by
+                the Department of Computer Science and Business Systems which
                 has 7 unique inter-collegiate events.
               </p>
             </div>

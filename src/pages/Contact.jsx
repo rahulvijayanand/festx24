@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ContactComp from "../components/ContactComp";
 import borderImage from "../assets/border.png"; // Adjust the path as necessary
 
@@ -10,13 +10,28 @@ function Contact() {
     { title: "Treasurer", name: "Vijayasubash E", contact: "8323456789" },
     { title: "Joint Secretary", name: "Balaji P", contact: "9123456789" },
     { title: "Joint Secretary", name: "K Sathish Kumar", contact: "8323456789" },
-    { title: "Coordinator", name: "Harson M", contact: "8523456789" },
-    { title: "Coordinator", name: "Elakkiya S", contact: "8623456789" },
+
   ];
+
+  // Scroll to the bottom after 1500 milliseconds when the page loads
+  useEffect(() => {
+    const scrollToBottom = () => {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth",
+      });
+    };
+
+    const timer = setTimeout(scrollToBottom, 1500);
+
+    // Cleanup timer when component unmounts
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div>
       {/* Header section */}
+
       <div className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center lg:justify-start body3">
         <div className="w-full lg:w-auto lg:pl-12">
           <div className="texthead text-5xl sm:text-7xl md:text-8xl tracking-[0.20em] text-left lg:text-9xl w-full p-4">
