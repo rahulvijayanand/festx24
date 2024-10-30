@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   
   const calculateTimeLeft = () => {
-    const targetDate = new Date("October 17, 2024 09:00:00").getTime();
+    const targetDate = new Date("November 5, 2024 09:00:00").getTime();
     const now = new Date().getTime();
     const difference = targetDate - now;
 
@@ -135,7 +135,7 @@ const Home = () => {
             Non-Stop Kondattam
           </div>
           <div className="texttitle text-2xl sm:text-3xl mt-4 text-white">
-            October 17th 2024
+            November 5th 2024
           </div>
           <div className="flex justify-center mt-12">
             <button
